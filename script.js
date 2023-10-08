@@ -54,6 +54,10 @@ const submitHandler = (event) => {
   if (+balanceNumberEl.textContent > 0) {
     balanceNumberEl.style.color = "green";
   }
+
+  if (+balanceNumberEl.textContent == 0) {
+    balanceNumberEl.style.color = "black";
+  }
 };
 
 formEl.addEventListener("submit", submitHandler);
@@ -88,6 +92,10 @@ const clickHandler = (event) => {
 
   if (+balanceNumberEl.textContent > 0) {
     balanceNumberEl.style.color = "green";
+  }
+
+  if (+balanceNumberEl.textContent == 0) {
+    balanceNumberEl.style.color = "black";
   }
 };
 
