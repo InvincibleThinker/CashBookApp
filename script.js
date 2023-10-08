@@ -47,6 +47,10 @@ const submitHandler = (event) => {
   const expenses = +numberExpenseEl.textContent;
   balanceNumberEl.textContent = income - expenses;
 
+  if (+balanceNumberEl.textContent == 0) {
+    balanceNumberEl.style.color = "black";
+  }
+  
   if (income - expenses < 0) {
     balanceNumberEl.style.color = "red";
   }
@@ -55,9 +59,7 @@ const submitHandler = (event) => {
     balanceNumberEl.style.color = "green";
   }
 
-  if (+balanceNumberEl.textContent == 0) {
-    balanceNumberEl.style.color = "black";
-  }
+  
 };
 
 formEl.addEventListener("submit", submitHandler);
@@ -86,6 +88,10 @@ const clickHandler = (event) => {
   const expenses = +numberExpenseEl.textContent;
   balanceNumberEl.textContent = income - expenses;
 
+  if (+balanceNumberEl.textContent == 0) {
+    balanceNumberEl.style.color = "black";
+  }
+  
   if (income - expenses < 0) {
     balanceNumberEl.style.color = "red";
   }
@@ -94,9 +100,7 @@ const clickHandler = (event) => {
     balanceNumberEl.style.color = "green";
   }
 
-  if (+balanceNumberEl.textContent == 0) {
-    balanceNumberEl.style.color = "black";
-  }
+  
 };
 
 transactionEl.addEventListener("click", clickHandler);
