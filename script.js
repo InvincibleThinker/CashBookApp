@@ -50,6 +50,10 @@ const submitHandler = (event) => {
   if (income - expenses < 0) {
     balanceNumberEl.style.color = "red";
   }
+
+  if (+balanceNumberEl.textContent > 0) {
+    balanceNumberEl.style.color = "green";
+  }
 };
 
 formEl.addEventListener("submit", submitHandler);
@@ -80,6 +84,10 @@ const clickHandler = (event) => {
 
   if (income - expenses < 0) {
     balanceNumberEl.style.color = "red";
+  }
+
+  if (+balanceNumberEl.textContent > 0) {
+    balanceNumberEl.style.color = "green";
   }
 };
 
